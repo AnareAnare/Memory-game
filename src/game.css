@@ -1,0 +1,121 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(002, 104, 115, 0.4);
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+}
+
+.central {
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(3, 94, 82);
+  border-radius: 10px;
+}
+
+.initial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers {
+  margin-bottom: 10px;
+  width: 15vw;
+  min-height: 3vw;
+  border: 1px solid rgb(3, 94, 82);
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+.numbers::placeholder {
+  transform: translateY(-0.8vw);
+  white-space: normal;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.numbers:focus {
+  outline: 2px solid rgb(3, 94, 82);
+}
+
+.numbers:focus::placeholder {
+  opacity: 0.3;
+}
+
+.start-button {
+  width: 10vw;
+  min-height: 3vw;
+  border: 1px solid rgb(3, 94, 82);
+  border-radius: 10px;
+  font-size: 1.2vw;
+  background-color: #fff;
+}
+
+.start-button:focus {
+  outline: 2px solid rgb(3, 94, 82);
+}
+
+.start-button:hover {
+  cursor: pointer;
+  background-color: rgba(002, 104, 115, 0.4);
+  outline: none;
+}
+
+.start-button:active {
+  background-color: rgba(1, 77, 85, 0.4);
+  outline: none;
+}
+
+.wrong-input {
+  border: 2px solid red;
+}
+
+.vanish {
+  display: none;
+}
+
+.central-added {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shirt-style {
+  font-size: 3vw;
+  color: transparent;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: pink;
+  background-image: radial-gradient(white 20%, transparent 0), radial-gradient(white 20%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  cursor: pointer;
+  transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+}
+
+.card-style {
+  pointer-events: none;
+  color: rgb(108, 108, 108);
+  transform: rotateY(360deg);
+  transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275), color 500ms;
+}
+
+.success-style {
+  border: 1px solid rgb(3, 94, 82);
+  background-color: rgb(120, 182, 174);
+  transform: scale(0.9);
+  transition: transform 500ms, background-color 500ms;
+}
