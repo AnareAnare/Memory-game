@@ -46,6 +46,7 @@
           central.classList.remove('central-added');
           initialDiv.classList.remove('vanish');
           central.append(initialDiv);
+          numbersArray = [];
         });
       }
     }
