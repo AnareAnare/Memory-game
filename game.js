@@ -8,9 +8,10 @@
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  let arr1 = [];
-  let arr2 = [];
+  
   function mainArray(numberOfCards) {
+    let arr1 = [];
+    let arr2 = [];
     numberOfCards *= numberOfCards;
     numberOfPairs = numberOfCards / 2;
     for (let i = 1; i <= numberOfPairs; i++) {
