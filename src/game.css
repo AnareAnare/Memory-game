@@ -1,32 +1,85 @@
 body {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(002, 104, 115, 0.4);
+  background-image:
+    -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.07)), color-stop(50%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(50%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.17))),
+    -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, rgba(255, 255, 255, 0.19)));
+  background-image:
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.07) 50%, transparent 50%),
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
+    -o-linear-gradient(left, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
+    -o-linear-gradient(left, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
   background-image:
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 50%, transparent 50%),
     linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
     linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
     linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
   background-size: 13px, 29px, 37px, 53px;
+  overflow: hidden;
 }
 
 .central {
   width: 40vw;
   height: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 3px solid rgb(3, 94, 82);
   border-radius: 10px;
 }
 
+@media (max-width: 1024px) {
+  .central {
+    width: 60vw;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .central {
+    width: 100%;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .central {
+    height: 70vh;
+  }
+}
+
 .initial {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -40,11 +93,42 @@ body {
   font-size: large;
 }
 
+@media (max-width: 576px) {
+  .numbers {
+    width: 25vw;
+    min-height: 5vw;
+  }
+}
+
 .numbers::placeholder {
-  transform: translateY(-0.8vw);
+  -webkit-transform: translateY(-0.7vw);
+  -ms-transform: translateY(-0.7vw);
+  transform: translateY(-0.7vw);
   white-space: normal;
   text-align: center;
   font-size: 1vw;
+}
+
+@media (max-width: 756px) {
+  .numbers::placeholder {
+    -webkit-transform: translateY(-0.9vw);
+    -ms-transform: translateY(-0.9vw);
+    transform: translateY(-0.9vw);
+  }
+}
+
+@media (max-width: 576px) {
+  .numbers::placeholder {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers::placeholder {
+    -webkit-transform: translateY(-1.5vw);
+    -ms-transform: translateY(-1.5vw);
+    transform: translateY(-1.5vw);
+  }
 }
 
 .numbers:focus {
@@ -62,6 +146,14 @@ body {
   border-radius: 10px;
   font-size: 1.2vw;
   background-color: #fff;
+}
+
+@media (max-width: 576px) {
+  .start-button {
+    width: 15vw;
+    min-height: 5vw;
+    font-size: 1.6vw;
+  }
 }
 
 .start-button:focus {
@@ -88,34 +180,63 @@ body {
 }
 
 .central-added {
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 .shirt-style {
-  font-size: 3vw;
+  font-size: 35px;
   color: transparent;
   text-align: center;
   border: 1px solid red;
   border-radius: 10px;
   background-color: pink;
+  background-image: -o-radial-gradient(white 20%, transparent 0), -o-radial-gradient(white 20%, transparent 0);
   background-image: radial-gradient(white 20%, transparent 0), radial-gradient(white 20%, transparent 0);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+  transition: -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+  -o-transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275);
   transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+  transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275), -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+}
+
+.animation-style {
+  opacity: 0;
+  transform: translateY(-1000px);
+}
+
+@media (max-width: 756px) {
+  .shirt-style {
+    font-size: 25px;
+  }
 }
 
 .card-style {
   pointer-events: none;
-  color: rgb(108, 108, 108);
+  color: rgb(3, 94, 82);
+  -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
+  -webkit-transition: color 500ms, -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+  transition: color 500ms, -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
+  -o-transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275), color 500ms;
   transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275), color 500ms;
+  transition: transform 500ms cubic-bezier(.2, .85, .4, 1.275), color 500ms, -webkit-transform 500ms cubic-bezier(.2, .85, .4, 1.275);
 }
 
 .success-style {
   border: 1px solid rgb(3, 94, 82);
   background-color: rgb(120, 182, 174);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
   transform: scale(0.9);
+  -webkit-transition: background-color 500ms, -webkit-transform 500ms;
+  transition: background-color 500ms, -webkit-transform 500ms;
+  -o-transition: transform 500ms, background-color 500ms;
   transition: transform 500ms, background-color 500ms;
+  transition: transform 500ms, background-color 500ms, -webkit-transform 500ms;
 }
